@@ -1,0 +1,10 @@
+
+services:
+  app:
+    image: golang:1.26
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    command: sh -c "go run ."
