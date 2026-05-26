@@ -1,0 +1,50 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Title}}</title>
+    {{if .Style}}
+        <link rel="stylesheet" href="/static/css/{{.Style}}">
+    {{end}}
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2969893140052542"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <a class="brand" href="/" aria-label="Serpentea home">
+            <!-- TODO: REPLACE WITH LOGO -->
+            <div class="brand-mark">S</div>
+            <div>
+              <h1>Serpentea</h1>
+              <p>Freelance Programming</p>
+            </div>
+          </a>
+
+          <nav aria-label="Primary navigation">
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <a class="button primary" href="mailto:consult@serpentea.net">Start a Project</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        {{template "content" .}}
+    </main>
+</div>
+</body>
+<footer>
+    <div class="container">
+    <p>© 2026 Serpentea. Freelance programming, development, and custom software.</p>
+    </div>
+</footer>
+</html>
+{{end}}
