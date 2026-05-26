@@ -14,7 +14,7 @@ type PageData struct {
 
 var templates map[string]*template.Template
 
-var liveDev = true
+var liveDev = false
 
 func initTemplates() {
 	templates = make(map[string]*template.Template)
@@ -111,7 +111,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	srv := &http.Server{
-		Addr:    ":8080",
+		Addr:    ":80",
 		Handler: mux,
 	}
 	mux.HandleFunc("GET /", homeHandle)
@@ -120,7 +120,7 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 	mux.Handle("GET /static/", http.StripPrefix("/static/", fs))
 
-	log.Println("Server running at http://localhost:8080")
+	log.Println("Server running at http://localhost:80")
 
 	if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 		log.Fatal(err)

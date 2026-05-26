@@ -6,7 +6,7 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 
-EXPOSE 8080
+EXPOSE 80
 
 COPY . .
 RUN go build -o server .
