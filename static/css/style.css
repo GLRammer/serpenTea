@@ -100,7 +100,6 @@ header {
   text-shadow: 0 0 4px var(--soft-teal);
   font-weight: 900;
   font-size: 19px;
-  background: conic-gradient(var(--dark-blue) 50deg, var(--green), var(--dark-blue));
   box-shadow: 0 0 28px rgba(45, 212, 191, 0.3);
 }
 
