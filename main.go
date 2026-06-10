@@ -82,8 +82,8 @@ func homeHandle(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	data := PageData{
-		Title: "Home",
-		MOTD:  "Hello from a template-based Go web server!",
+		Title: "SerpenTea",
+		MOTD:  "Fixing your issues one step at a time!",
 	}
 
 	render(w, "home.html", data)
